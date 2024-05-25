@@ -1,6 +1,16 @@
 
-›
-java:S1450"SRemove the "cell" field and declare it as a local variable in the relevant methods.(˜áü¹üÿÿÿÿ8‘†…¬ú1J$63eb496a-1cb1-4870-a930-11d4defe40ec
-k	java:S108H")Either remove or fill this block of code.(”ı¾8ŠúŠ¬ú1J$261ebd26-34d7-4679-a954-eb3f3e5c6b9d
-T
-java:S1135K"2Complete the task associated to this TODO comment.(ËÙŒ±ùÿÿÿÿ8Øì”¬ú1
+š
+java:S1450"RRemove the "col" field and declare it as a local variable in the relevant methods.(¸—Ş³úÿÿÿÿ8Ë…¥€û1J$5ca1d868-7689-4185-aebe-0447e77a0280
+˜
+java:S1450"URemove the "endCol" field and declare it as a local variable in the relevant methods.(ÈÖºù8Ë…¥€û1J$e996755a-ba01-4477-b5d0-db60bf35b410
+˜
+java:S1450"URemove the "endRow" field and declare it as a local variable in the relevant methods.(“î»8Ë…¥€û1J$8b455e17-cd30-4426-ae1e-3212f3889a4c
+•
+java:S1450"RRemove the "row" field and declare it as a local variable in the relevant methods.(©ÊâË8Ë…¥€û1J$58c6312e-b0d9-4a85-a79d-e5fd8e5bae48
+`
+java:S2119f"Save and re-use this "Random".(¼İÅf8Û…¥€û1J$b69faba6-d738-4a86-973b-5d2aa4fe0349
+
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(Î™õ8ß…¥€û1J$b82c5997-049f-4185-9432-0f38b52b2b30
+l	java:S108¡")Either remove or fill this block of code.(”ı¾8ß…¥€û1J$d158fcde-0c26-40ba-a1da-abaabc469f50
+{
+java:S1135¤"2Complete the task associated to this TODO comment.(²Ïœİûÿÿÿÿ8ß…¥€û1J$ff2603c9-4212-4128-b0aa-03c5ec9a938f

@@ -2,6 +2,7 @@ package com.jakobniinja;
 
 import static java.awt.Color.BLACK;
 import static java.awt.Color.GREEN;
+import static java.awt.Color.RED;
 import static java.awt.Color.WHITE;
 
 import java.awt.Dimension;
@@ -28,6 +29,12 @@ public class Cell extends JPanel {
 
   private boolean[] wall = {true, true, true, true};
 
+  private boolean[] path = {false, false, false, false};
+
+  private boolean current = false;
+
+  private boolean end = false;
+
   public Cell(int row, int col) {
     this.row = row;
     this.col = col;
@@ -53,8 +60,18 @@ public class Cell extends JPanel {
     return new Dimension(SIZE, SIZE);
   }
 
+  public void setCurrent(boolean current) {
+    this.current = current;
+    repaint();
+  }
+
+  public void setEnd(boolean end) {
+    this.end = end;
+    repaint();
+  }
+
   public void printComponent(Graphics g) {
-    // draw the background
+    // Draw the background
     g.setColor(WHITE);
     g.fillRect(0, 0, SIZE, SIZE);
     g.setColor(BLACK);
@@ -62,7 +79,7 @@ public class Cell extends JPanel {
     g.setColor(GREEN);
     g.fillOval(3, 3, SIZE - 6, SIZE - 6);
 
-    // draw the walls
+    // Draw the walls
     if (isWall(TOP)) {
       g.drawLine(0, 0, SIZE, 0);
     }
@@ -70,9 +87,29 @@ public class Cell extends JPanel {
       g.drawLine(0, 0, 0, SIZE);
     }
 
-    // draw the path
+    // Draw the path
+    g.setColor(GREEN);
+    if (path[TOP]) {
+      g.drawLine(SIZE / 2, 0, SIZE / 2, SIZE / 2);
+    }
+    if (path[BOTTOM]) {
+      g.drawLine(SIZE / 2, SIZE, SIZE / 2, SIZE / 2);
+    }
+    if (path[LEFT]) {
+      g.drawLine(0, SIZE / 2, SIZE / 2, SIZE / 2);
+    }
+    if (path[RIGHT]) {
+      g.drawLine(SIZE, SIZE / 2, SIZE / 2, SIZE / 2);
+    }
 
-    // draw the balls
+    // Draw the balls
+    if (current) {
+      g.setColor(GREEN);
+      g.fillOval(3, 3, SIZE - 6, SIZE - 6);
+    } else if (end) {
+      g.setColor(RED);
+      g.fillOval(3, 3, SIZE - 6, SIZE - 6);
+    }
   }
 
   public boolean hasAllWalls() {
@@ -81,6 +118,27 @@ public class Cell extends JPanel {
 
   public void removeWall(int w) {
     wall[w] = false;
+    repaint();
+  }
+
+  public void openTo(Cell neighbor) {
+    if (row < neighbor.getRow()) {
+      removeWall(BOTTOM);
+      neighbor.removeWall(TOP);
+    } else if (row > neighbor.getRow()) {
+      removeWall(TOP);
+      neighbor.removeWall(BOTTOM);
+    } else if (col < neighbor.getCol()) {
+      removeWall(RIGHT);
+      neighbor.removeWall(LEFT);
+    } else if (col > neighbor.getCol()) {
+      removeWall(LEFT);
+      neighbor.removeWall(RIGHT);
+    }
+  }
+
+  public void addPath(int side) {
+    path[side] = true;
     repaint();
   }
 }
