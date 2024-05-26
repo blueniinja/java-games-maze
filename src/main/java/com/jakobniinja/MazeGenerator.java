@@ -5,10 +5,13 @@ import static java.awt.Color.BLACK;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.GridLayout;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 
@@ -61,7 +64,89 @@ public class MazeGenerator extends JFrame {
     // Button panel
 
     // Listeners
+    addKeyListener(new KeyAdapter() {
+      @Override
+      public void keyReleased(KeyEvent e) {
+        int keyCode = e.getKeyCode();
+        moveBall(keyCode);
+      }
+    });
 
+  }
+
+  private void moveBall(int direction) {
+    switch (direction) {
+      case KeyEvent.VK_UP:
+
+        // Move up if this cell does not have a top wall
+        if (!cell[row][col].isWall(Cell.TOP)) {
+          moveTo(row - 1, col, Cell.TOP, Cell.BOTTOM);
+
+          // Move up more if this is a long column
+          while (!cell[row][col].isWall(Cell.TOP) && cell[row][col].isWall(Cell.LEFT) && cell[row][col].isWall(Cell.RIGHT)
+              && cell[row][col].isWall(Cell.BOTTOM)) {
+            moveTo(row - 1, col, Cell.TOP, Cell.BOTTOM);
+          }
+        }
+        break;
+
+      case KeyEvent.VK_DOWN:
+
+        // Move down if this cell does not have a bottom wall
+        if (!cell[row][col].isWall((Cell.BOTTOM))) {
+          moveTo(row + 1, col, Cell.BOTTOM, Cell.TOP);
+
+          // Move down more if this is a long column
+          while (!cell[row][col].isWall(Cell.BOTTOM) && cell[row][col].isWall(Cell.LEFT) && cell[row][col].isWall(Cell.RIGHT)
+              && cell[row][col].isWall(Cell.TOP)) {
+            moveTo(row + 1, col, Cell.BOTTOM, Cell.TOP);
+          }
+        }
+
+        break;
+
+      case KeyEvent.VK_LEFT:
+        // Move left if this cell does not have a left wall
+        if (!cell[row][col].isWall(Cell.LEFT)) {
+          moveTo(row, col - 1, Cell.LEFT, Cell.RIGHT);
+
+          // Move left more if this is a long column
+          while (!cell[row][col].isWall(Cell.LEFT) && cell[row][col].isWall(Cell.TOP) && cell[row][col].isWall(Cell.BOTTOM)
+              && cell[row][col].isWall(Cell.RIGHT)) {
+            moveTo(row, col - 1, Cell.LEFT, Cell.RIGHT);
+          }
+        }
+
+        break;
+
+      case KeyEvent.VK_RIGHT:
+        // Move right if this cell does not have a left wall
+        if (!cell[row][col].isWall(Cell.RIGHT)) {
+          moveTo(row, col + 1, Cell.RIGHT, Cell.LEFT);
+          // Move right more if this is a long column
+          while (!cell[row][col].isWall(Cell.RIGHT) && cell[row][col].isWall(Cell.TOP) && cell[row][col].isWall(Cell.BOTTOM)
+              && cell[row][col].isWall(Cell.LEFT)) {
+            moveTo(row, col + 1, Cell.RIGHT, Cell.LEFT);
+          }
+        }
+
+        break;
+    }
+
+    // Puzzle solved?
+    if (row == endRow && col == endCol) {
+      String message = "Congratulations. You solved it!";
+      JOptionPane.showMessageDialog(this, message);
+    }
+  }
+
+  private void moveTo(int nextRow, int nexCol, int first, int second) {
+    cell[row][col].setCurrent(false);
+    cell[row][col].addPath(first);
+    row = nextRow;
+    col = nexCol;
+    cell[row][col].setCurrent(true);
+    cell[row][col].addPath(second);
   }
 
   private void newMaze() {

@@ -1,16 +1,11 @@
 
 š
-java:S1450"RRemove the "col" field and declare it as a local variable in the relevant methods.(¸—Ş³úÿÿÿÿ8Ë…¥€û1J$5ca1d868-7689-4185-aebe-0447e77a0280
-˜
-java:S1450"URemove the "endCol" field and declare it as a local variable in the relevant methods.(ÈÖºù8Ë…¥€û1J$e996755a-ba01-4477-b5d0-db60bf35b410
-˜
-java:S1450"URemove the "endRow" field and declare it as a local variable in the relevant methods.(“î»8Ë…¥€û1J$8b455e17-cd30-4426-ae1e-3212f3889a4c
-•
-java:S1450"RRemove the "row" field and declare it as a local variable in the relevant methods.(©ÊâË8Ë…¥€û1J$58c6312e-b0d9-4a85-a79d-e5fd8e5bae48
-`
-java:S2119f"Save and re-use this "Random".(¼İÅf8Û…¥€û1J$b69faba6-d738-4a86-973b-5d2aa4fe0349
-
-java:S1155">Use isEmpty() to check whether the collection is empty or not.(Î™õ8ß…¥€û1J$b82c5997-049f-4185-9432-0f38b52b2b30
-l	java:S108¡")Either remove or fill this block of code.(”ı¾8ß…¥€û1J$d158fcde-0c26-40ba-a1da-abaabc469f50
+java:S3776M"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(İÏş»ùÿÿÿÿ8ôÇü¨û1J$cf3980d5-c49d-44ae-ba44-fa57075cc3b7
+i	java:S131N""Add a default case to this switch.(Æóõµıÿÿÿÿ8ôÇü¨û1J$d18d99c6-16e0-4b25-af91-486a41a554fa
+a
+java:S2119»"Save and re-use this "Random".(¼İÅf8„Èü¨û1J$75d0f3db-0738-40b7-b736-18a9dabd2eaf
+‚
+java:S1155Ô">Use isEmpty() to check whether the collection is empty or not.(Î™õ8„Èü¨û1J$55332f5d-68a5-4f5f-ba73-afbc09e91b83
+l	java:S108ö")Either remove or fill this block of code.(”ı¾8„Èü¨û1J$709fd8c8-4cc4-409a-b981-422a41e0ee93
 {
-java:S1135¤"2Complete the task associated to this TODO comment.(²Ïœİûÿÿÿÿ8ß…¥€û1J$ff2603c9-4212-4128-b0aa-03c5ec9a938f
+java:S1135ù"2Complete the task associated to this TODO comment.(²Ïœİûÿÿÿÿ8„Èü¨û1J$b4fad61c-4712-40ff-bed0-5e231e3ee543
