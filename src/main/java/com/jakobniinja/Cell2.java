@@ -1,19 +1,15 @@
 package com.jakobniinja;
 
-import static java.awt.Color.BLACK;
-import static java.awt.Color.GREEN;
-import static java.awt.Color.RED;
-import static java.awt.Color.WHITE;
-
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
-import javax.swing.JPanel;
+import javax.swing.JFrame;
 
-public class Cell extends JPanel {
+public class Cell2 extends JFrame {
 
   private static final long serialVersionUID = 1L;
 
-  private static final int SIZE = 20;
+  private static int SIZE = 20;
 
   public static final int TOP = 0;
 
@@ -35,9 +31,53 @@ public class Cell extends JPanel {
 
   private boolean end = false;
 
-  public Cell(int row, int col) {
+  public Cell2(int row, int col) {
     this.row = row;
     this.col = col;
+  }
+
+  public void paintComponent(Graphics g) {
+    // draw the background
+    g.setColor(Color.WHITE);
+    g.fillRect(0, 0, SIZE, SIZE);
+    g.setColor(Color.BLACK);
+
+    // draw the walls
+    if (!isWall(TOP)) {
+      g.drawLine(0, 0, SIZE, 0);
+    }
+    if (!isWall(LEFT)) {
+      g.drawLine(0, 0, 0, SIZE);
+    }
+
+    // draw the path
+    g.setColor(Color.GREEN);
+    if (path[TOP]) {
+      g.drawLine(SIZE / 2, 0, SIZE / 2, SIZE / 2);
+    }
+    if (path[BOTTOM]) {
+      g.drawLine(SIZE / 2, SIZE, SIZE / 2, SIZE / 2);
+    }
+    if (path[LEFT]) {
+      g.drawLine(0, SIZE / 2, SIZE / 2, SIZE / 2);
+    }
+    if (path[RIGHT]) {
+      g.drawLine(SIZE, SIZE / 2, SIZE / 2, SIZE / 2);
+    }
+
+    // draw the balls
+    if (current) {
+      g.setColor(Color.GREEN);
+      g.fillOval(3, 3, SIZE - 6, SIZE - 6);
+    } else if (end) {
+      g.setColor(Color.RED);
+      g.fillOval(3, 3, SIZE - 6, SIZE - 6);
+    }
+  }
+
+  public Dimension getPreferredSize() {
+    Dimension size = new Dimension(SIZE, SIZE);
+    return size;
   }
 
   public int getRow() {
@@ -52,68 +92,9 @@ public class Cell extends JPanel {
     return wall[index];
   }
 
-  public void paintComponent(Graphics g) {
-    g.drawLine(0, 0, SIZE, SIZE);
-  }
-
-  public Dimension getPreferredSize() {
-    return new Dimension(SIZE, SIZE);
-  }
-
-  public void setCurrent(boolean current) {
-    this.current = current;
-    repaint();
-  }
-
-  public void setEnd(boolean end) {
-    this.end = end;
-    repaint();
-  }
-
-  public void printComponent(Graphics g) {
-    // Draw the background
-    g.setColor(WHITE);
-    g.fillRect(0, 0, SIZE, SIZE);
-    g.setColor(BLACK);
-    g.drawRect(0, 0, SIZE, SIZE);
-    g.setColor(GREEN);
-    g.fillOval(3, 3, SIZE - 6, SIZE - 6);
-
-    // Draw the walls
-    if (!isWall(TOP)) {
-      g.drawLine(0, 0, SIZE, 0);
-    }
-    if (!isWall(LEFT)) {
-      g.drawLine(0, 0, 0, SIZE);
-    }
-
-    // Draw the path
-    g.setColor(GREEN);
-    if (path[TOP]) {
-      g.drawLine(SIZE / 2, 0, SIZE / 2, SIZE / 2);
-    }
-    if (path[BOTTOM]) {
-      g.drawLine(SIZE / 2, SIZE, SIZE / 2, SIZE / 2);
-    }
-    if (path[LEFT]) {
-      g.drawLine(0, SIZE / 2, SIZE / 2, SIZE / 2);
-    }
-    if (path[RIGHT]) {
-      g.drawLine(SIZE, SIZE / 2, SIZE / 2, SIZE / 2);
-    }
-
-    // Draw the balls
-    if (current) {
-      g.setColor(GREEN);
-      g.fillOval(3, 3, SIZE - 6, SIZE - 6);
-    } else if (end) {
-      g.setColor(RED);
-      g.fillOval(3, 3, SIZE - 6, SIZE - 6);
-    }
-  }
-
   public boolean hasAllWalls() {
-    return wall[0] && wall[1] && wall[2] && wall[3];
+    boolean allWalls = wall[0] && wall[1] && wall[2] && wall[3];
+    return allWalls;
   }
 
   public void removeWall(int w) {
@@ -121,7 +102,7 @@ public class Cell extends JPanel {
     repaint();
   }
 
-  public void openTo(Cell neighbor) {
+  public void openTo(Cell2 neighbor) {
     if (row < neighbor.getRow()) {
       removeWall(BOTTOM);
       neighbor.removeWall(TOP);
@@ -135,6 +116,16 @@ public class Cell extends JPanel {
       removeWall(LEFT);
       neighbor.removeWall(RIGHT);
     }
+  }
+
+  public void setCurrent(boolean current) {
+    this.current = current;
+    repaint();
+  }
+
+  public void setEnd(boolean end) {
+    this.end = end;
+    repaint();
   }
 
   public void addPath(int side) {

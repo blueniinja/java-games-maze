@@ -1,0 +1,26 @@
+
+p
+java:S1604J"(Make this anonymous inner class a lambda(¡©Ê¥ûÿÿÿÿ8ÛÛºÔû1J$a0ae35f2-14a6-4175-afc7-83c47852e07b
+q
+java:S1604‘"(Make this anonymous inner class a lambda(¤©Òâüÿÿÿÿ8ÛÛºÔû1J$19763299-2799-4c65-93ca-ca7574655701
+¢
+java:S2293Š"YReplace the type specification in this constructor call with the diamond operator ("<>").(‹Ç‘†øÿÿÿÿ8ÛÛºÔû1J$b7d7bd60-1905-4a4c-bb58-1daa0558b1f0
+¢
+java:S2293”"YReplace the type specification in this constructor call with the diamond operator ("<>").(úı‘óıÿÿÿÿ8ÛÛºÔû1J$a1f9b787-70b3-4a09-b74f-915b3754290d
+É
+java:S1186S"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(˜Â½€øÿÿÿÿ8èíºÔû1J$894e342d-a6bd-4e91-9eaa-6f0e890a1c80
+‚
+java:S1161S":Add the "@Override" annotation above this method signature(˜Â½€øÿÿÿÿ8èíºÔû1J$dd3c08ff-da15-47e0-ac77-15a26078ffe1
+‚
+java:S1161Y":Add the "@Override" annotation above this method signature(˜Â½€øÿÿÿÿ8éíºÔû1J$14bace68-f4a9-4d83-b85b-5aff5d4a3c51
+m	java:S106["+Replace this use of System.out by a logger.(Áß‡Ü8éíºÔû1J$1e4084da-86a3-47e6-ada4-794e5afcb9cb
+‚
+java:S1161_":Add the "@Override" annotation above this method signature(˜Â½€øÿÿÿÿ8éíºÔû1J$ff22dfc2-f570-4160-ba22-2e7b25b78bcd
+g
+java:S2119"Save and re-use this "Random".(šŸ«íøÿÿÿÿ8òíºÔû1J$c48ab1e2-37bf-43c8-bfce-b41144a79bc2
+‚
+java:S1155§">Use isEmpty() to check whether the collection is empty or not.(Î™õ8òíºÔû1J$755f16cf-25bf-4e93-8715-08ec8850c73e
+›
+java:S3776Ï"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(İÏş»ùÿÿÿÿ8òíºÔû1J$0416a5f6-b105-43fd-a72c-ad9f83bd6e0f
+j	java:S131Ğ""Add a default case to this switch.(Æóõµıÿÿÿÿ8òíºÔû1J$4448c98c-34e4-4ae4-8da4-e935e17cc5ef
+l	java:S108")Either remove or fill this block of code.(”ı¾8òíºÔû1J$d8d72ec3-406b-4a67-aca7-c66b2a27639f

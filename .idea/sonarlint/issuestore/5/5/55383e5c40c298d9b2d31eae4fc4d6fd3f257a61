@@ -1,9 +1,0 @@
-
-š
-java:S3776U"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(İÏş»ùÿÿÿÿ8‹˜–Òû1J$3a81fd7a-9873-4a67-9111-d6774c6867b9
-i	java:S131V""Add a default case to this switch.(Æóõµıÿÿÿÿ8‹˜–Òû1J$b2ec1ed4-fef2-4e9e-99e0-1f26d58d06a7
-a
-java:S2119Å"Save and re-use this "Random".(¼İÅf8›˜–Òû1J$0d9924ea-da29-4c06-acf4-e88c2b3fae00
-‚
-java:S1155Ş">Use isEmpty() to check whether the collection is empty or not.(Î™õ8ÏğµÒû1J$062dc3e5-df5f-4285-ada7-7a0b7402d9a0
-l	java:S108€")Either remove or fill this block of code.(”ı¾8›˜–Òû1J$d7c04069-898a-4ab7-a192-e74cbc60db2b

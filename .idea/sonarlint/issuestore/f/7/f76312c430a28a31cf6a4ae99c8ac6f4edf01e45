@@ -1,0 +1,9 @@
+
+~
+java:S1488O"\Immediately return this expression instead of assigning it to the temporary variable "size".(¦‹çÉùÿÿÿÿ8Öí´Ôû1
+}
+java:S1488`"`Immediately return this expression instead of assigning it to the temporary variable "allWalls".(Ë­…Ş8×í´Ôû1
+k
+java:S3008"ORename this field "SIZE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·±ï8Ùí´Ôû1
+\
+java:S1161N":Add the "@Override" annotation above this method signature(Ú„ÎÕşÿÿÿÿ8Ùí´Ôû1
