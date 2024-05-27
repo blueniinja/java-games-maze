@@ -9,6 +9,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.Random;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -19,9 +20,9 @@ public class MazeGenerator extends JFrame {
 
   private static final long serialVersionUID = 1L;
 
-  private int rows = 0;
+  private int rows = 5;
 
-  private int cols = 0;
+  private int cols = 5;
 
   private Cell[][] cell = new Cell[rows][cols];
 
@@ -32,7 +33,6 @@ public class MazeGenerator extends JFrame {
   private int endRow = rows - 1;
 
   private int endCol = cols - 1;
-
 
   private JLabel tileLabel = new JLabel("Maze");
 
@@ -62,6 +62,14 @@ public class MazeGenerator extends JFrame {
     centerPanel.add(mazePanel);
 
     // Button panel
+    JButton buttonPanel = new JButton();
+    buttonPanel.setBackground(BLACK);
+    add(buttonPanel, BorderLayout.PAGE_END);
+
+    JButton newMazeButton = new JButton("New Maze");
+    newMazeButton.setFocusable(false);
+    newMazeButton.addActionListener(e -> newMaze());
+    buttonPanel.add(newMazeButton);
 
     // Listeners
     addKeyListener(new KeyAdapter() {
@@ -120,7 +128,7 @@ public class MazeGenerator extends JFrame {
         break;
 
       case KeyEvent.VK_RIGHT:
-        // Move right if this cell does not have a left wall
+        // Move right if this cell does not have a right wall
         if (!cell[row][col].isWall(Cell.RIGHT)) {
           moveTo(row, col + 1, Cell.RIGHT, Cell.LEFT);
           // Move right more if this is a long column
@@ -150,6 +158,7 @@ public class MazeGenerator extends JFrame {
   }
 
   private void newMaze() {
+    mazePanel.removeAll();
     mazePanel.setLayout(new GridLayout(rows, cols));
     cell = new Cell[rows][cols];
 
@@ -167,13 +176,14 @@ public class MazeGenerator extends JFrame {
     endCol = cols - 1;
     cell[row][col].setCurrent(true);
     cell[endRow][endCol].setEnd(true);
+
+    mazePanel.revalidate();
   }
 
   public boolean isAvailable(int r, int c) {
     boolean available = false;
-    if (r > 0 && r < rows && c >= 0 && c < cols && cell[r][c].hasAllWalls()) {
+    if (r >= 0 && r < rows && c >= 0 && c < cols && cell[r][c].hasAllWalls()) {
       available = true;
-
     }
     return available;
   }
@@ -246,6 +256,5 @@ public class MazeGenerator extends JFrame {
     } catch (Exception e) {
     }
     EventQueue.invokeLater(MazeGenerator::new);
-    //  TODO: Listing 7-41
   }
 }

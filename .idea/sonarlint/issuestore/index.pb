@@ -5,5 +5,3 @@
 0src/main/java/com/jakobniinja/MazeGenerator.java,5\5\55383e5c40c298d9b2d31eae4fc4d6fd3f257a61
 W
 'src/main/java/com/jakobniinja/Cell.java,b\7\b780108cf75047ac5c94aad5855d6d2436fd257c
-W
-'src/main/java/com/jakobniinja/README.md,7\5\755ccb6b2c86993e82161a99ee1e7e95d1904e3b

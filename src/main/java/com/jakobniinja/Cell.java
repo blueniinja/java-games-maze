@@ -80,10 +80,10 @@ public class Cell extends JPanel {
     g.fillOval(3, 3, SIZE - 6, SIZE - 6);
 
     // Draw the walls
-    if (isWall(TOP)) {
+    if (!isWall(TOP)) {
       g.drawLine(0, 0, SIZE, 0);
     }
-    if (isWall(LEFT)) {
+    if (!isWall(LEFT)) {
       g.drawLine(0, 0, 0, SIZE);
     }
 
