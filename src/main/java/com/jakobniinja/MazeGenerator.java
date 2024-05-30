@@ -20,9 +20,9 @@ class MazeGenerator extends JFrame {
 
   private static final long serialVersionUID = 1L;
 
-  private int rows = 5;
+  private int rows = 12;
 
-  private int cols = 5;
+  private int cols = 12;
 
   private Cell[][] cell = new Cell[rows][cols];
 

@@ -1,17 +1,19 @@
 
 p
-java:S1604D"(Make this anonymous inner class a lambda(¡©Ê¥ûÿÿÿÿ8¯…ìÔû1J$fcd6b32a-2905-4df8-a511-dd84f1c6a631
+java:S1604D"(Make this anonymous inner class a lambda(¡©Ê¥ûÿÿÿÿ8¯…ìÔû1J$e47c0e0f-0a72-4af4-90be-e94996e8ed82
 q
-java:S1604Ò"(Make this anonymous inner class a lambda(¤©Òâüÿÿÿÿ8¯…ìÔû1J$81a2488a-fbde-4df9-9b9f-a20a15c2a3c1
+java:S1604Ò"(Make this anonymous inner class a lambda(¤©Òâüÿÿÿÿ8¯…ìÔû1J$57efdb0e-8c80-4110-b151-caf6a20ada26
 œ
-java:S2293k"YReplace the type specification in this constructor call with the diamond operator ("<>").(«Ù Â8¯…ìÔû1J$8255089d-0226-4778-8343-64fe87f613a2
+java:S2293k"YReplace the type specification in this constructor call with the diamond operator ("<>").(«Ù Â8¯…ìÔû1J$6d52a8c8-5221-4b0d-af07-f5ca0e4ce543
 ¡
-java:S2293t"YReplace the type specification in this constructor call with the diamond operator ("<>").(ËŞ…¨ûÿÿÿÿ8¯…ìÔû1J$8b1e1b22-1a40-41c0-b694-f92b3bdebfcd
+java:S2293t"YReplace the type specification in this constructor call with the diamond operator ("<>").(ËŞ…¨ûÿÿÿÿ8¯…ìÔû1J$2349e117-ec0c-4446-a443-9a5ca401d21b
 ‚
-java:S1161M":Add the "@Override" annotation above this method signature(˜Â½€øÿÿÿÿ8²—ìÔû1J$180a27fd-9793-43ce-88af-8b02757446f7
+java:S1161M":Add the "@Override" annotation above this method signature(˜Â½€øÿÿÿÿ8²—ìÔû1J$d9913926-e5d7-44d8-bc13-6ed9855443a8
 f
-java:S2119o"Save and re-use this "Random".(šŸ«íøÿÿÿÿ8²—ìÔû1J$6f1513d1-8d10-4cab-8c17-feea4d8b8210
+java:S2119o"Save and re-use this "Random".(šŸ«íøÿÿÿÿ8²—ìÔû1J$25b2f607-20cf-4bf2-a0e8-14b2b4d9f95e
+‚
+java:S1155‚">Use isEmpty() to check whether the collection is empty or not.(Î™õ8­Áâ×û1J$041e8dc1-8517-4e69-80aa-b8d7d7313bcc
 ›
-java:S3776˜"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(İÏş»ùÿÿÿÿ8²—ìÔû1J$71bdab4f-01f1-46e2-be52-b9df9b3a0fa9
-j	java:S131™""Add a default case to this switch.(Æóõµıÿÿÿÿ8Á—ìÔû1J$b4372f1f-80bb-4cfa-9b20-e232b2f805e1
-l	java:S108Ï")Either remove or fill this block of code.(”ı¾8Á—ìÔû1J$4f0fac37-6bec-493e-abbe-9d2cce136635
+java:S3776˜"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(İÏş»ùÿÿÿÿ8²—ìÔû1J$f9a6f721-4d76-4017-9ef3-6e85fb7f25e7
+j	java:S131™""Add a default case to this switch.(Æóõµıÿÿÿÿ8Á—ìÔû1J$26cb8971-6163-4157-8417-327d8a3cd902
+l	java:S108Ï")Either remove or fill this block of code.(”ı¾8Á—ìÔû1J$f9c259d0-d257-46b0-81c4-6b23f57edcdb
